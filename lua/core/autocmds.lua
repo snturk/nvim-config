@@ -35,13 +35,13 @@ autocmd('BufEnter', {
 -- Run Neoformat on events for ts, js, jsx, tsx, json
 --- On Save
 autocmd('BufWritePre', {
-  pattern = { '*.ts', '*.js', '*.jsx', '*.tsx', '*.json' },
+  pattern = { '*.ts', '*.js', '*.jsx', '*.tsx', '*.json', '*.css', '*.scss', '.vue', '.html' },
   command = 'Neoformat'
 })
 
 -- On Enter or Leave insert mode
 autocmd('InsertEnter', {
-  pattern = { '*.ts', '*.js', '*.jsx', '*.tsx', '*.json' },
+  pattern = { '*.ts', '*.js', '*.jsx', '*.tsx', '*.json', '*.css', '*.scss', '.vue', '.html' },
   command = 'Neoformat'
 })
 

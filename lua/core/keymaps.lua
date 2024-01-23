@@ -56,9 +56,9 @@ map('n', '<C-f>', ':NvimTreeFindFile<CR>')
 -- Telescope shortcuts
 
 -- Find files with CTRL and p
-map('n', '<C-p>', ':Telescope find_files<CR>')
--- Find buffers with CTRL and b
-map('n', '<C-b>', ':Telescope buffers<CR>')
+map('n', '<C-p>', ':Telescope find_files shorten_path=true<CR>')
+-- Live grep with CTRL and g
+map('n', '<C-g>', ':Telescope live_grep shorten_path=true<CR>')
 
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts

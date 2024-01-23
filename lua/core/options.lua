@@ -17,6 +17,7 @@ opt.clipboard = 'unnamedplus'         -- Copy/paste to system clipboard
 opt.swapfile = false                  -- Don't use swapfile
 opt.completeopt = 'menuone,noinsert,noselect'  -- Autocomplete options
 vim.g.copilot_assume_mapped = true
+vim.g.copilot_filetypes = {markdown = true}
 
 -----------------------------------------------------------
 -- Neovim UI
@@ -24,7 +25,6 @@ vim.g.copilot_assume_mapped = true
 opt.number = true           -- Show line number
 opt.showmatch = true        -- Highlight matching parenthesis
 opt.foldmethod = 'marker'   -- Enable folding (default 'foldmarker')
-opt.colorcolumn = '80'      -- Line lenght marker at 80 columns
 opt.splitright = true       -- Vertical split to the right
 opt.splitbelow = true       -- Horizontal split to the bottom
 opt.ignorecase = true       -- Ignore case letters when search
@@ -56,8 +56,6 @@ opt.updatetime = 250        -- ms to wait for trigger an event
 -- Disable nvim intro
 opt.shortmess:append "sI"
 
--- Color Scheme
-vim.cmd[[colorscheme tokyonight]]
 -- -- Disable builtin plugins
 local disabled_built_ins = {
    "2html_plugin",

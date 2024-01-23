@@ -42,7 +42,6 @@ lazy.setup({
 
     -- other colorschemes:
     { 'tanvirtin/monokai.nvim', lazy = true },
-    { 'https://github.com/rose-pine/neovim', name = 'rose-pine', lazy = true },
 
     -- Icons
     { 'kyazdani42/nvim-web-devicons', lazy = true },
@@ -53,13 +52,6 @@ lazy.setup({
       dependencies = { 'kyazdani42/nvim-web-devicons' },
     },
 
-    -- Themes
-    {
-      "folke/tokyonight.nvim",
-      lazy = false,
-      priority = 1000,
-      opts = {},
-    },
     -- Git labels
     {
       'lewis6991/gitsigns.nvim',
@@ -70,6 +62,14 @@ lazy.setup({
       },
       config = function()
         require('gitsigns').setup{}
+      end
+    },
+
+    -- Comment
+    {
+      'nvim-comment',
+      config = function()
+        require('nvim_comment').setup()
       end
     },
 
@@ -95,8 +95,6 @@ lazy.setup({
     -- Vim Go
     {
       'fatih/vim-go',
-      ft = 'go',
-      lazy = true,
     },
 
     -- Statusline
