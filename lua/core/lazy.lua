@@ -65,13 +65,13 @@ lazy.setup({
       end
     },
 
-    -- Comment
-    {
-      'nvim-comment',
-      config = function()
-        require('nvim_comment').setup()
-      end
-    },
+    -- -- Comment
+    -- {
+    --   'nvim-comment',
+    --   config = function()
+    --     require('nvim_comment').setup()
+    --   end
+    -- },
 
     -- Copilot
     {'github/copilot.vim'},

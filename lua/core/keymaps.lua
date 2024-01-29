@@ -46,19 +46,16 @@ map('n', '<C-s>', ':wa<CR>')
 -- Close all windows and exit from Neovim with <leader> and q
 map('n', '<C-q>', ':qa!<CR>')
 
--- NvimTree shortcuts
+-- Telescope shortcuts
+
+map('n', '<C-p>', ':Telescope find_files shorten_path=true<CR>')
+map('n', '<C-b>', ':Telescope buffers shorten_path=true<CR>')
+map('n', '<C-g>', ':Telescope live_grep shorten_path=true<CR>')
 
 -- Toggle NvimTree with CTRL and n
 map('n', '<C-n>', ':NvimTreeToggle<CR>')
 -- Find file in NvimTree with CTRL and f
 map('n', '<C-f>', ':NvimTreeFindFile<CR>')
-
--- Telescope shortcuts
-
--- Find files with CTRL and p
-map('n', '<C-p>', ':Telescope find_files shorten_path=true<CR>')
--- Live grep with CTRL and g
-map('n', '<C-g>', ':Telescope live_grep shorten_path=true<CR>')
 
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
@@ -70,3 +67,8 @@ map('t', '<Esc>', '<C-\\><C-n>')                    -- exit
 
 -- Tagbar
 map('n', '<leader>z', ':TagbarToggle<CR>')          -- open/close
+
+-- BufferLine
+
+map('n', '<TAB>', ':BufferLineCycleNext<CR>')
+map('n', '<S-TAB>', ':BufferLineCyclePrev<CR>')
